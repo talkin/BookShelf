@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.Service.BookServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2014-09-24T00:26:59" hostname="CNjtao.local" time="0.136">
+  <properties/>
+  <testcase name="should_get_books_by_title" classname="com.app.Service.BookServiceTest" time="0.11"/>
+  <testcase name="should_get_all_books" classname="com.app.Service.BookServiceTest" time="0.014"/>
+  <testcase name="should_update_book" classname="com.app.Service.BookServiceTest" time="0.004"/>
+  <testcase name="should_add_a_book" classname="com.app.Service.BookServiceTest" time="0.003"/>
+  <testcase name="should_delete_a_book_by_title" classname="com.app.Service.BookServiceTest" time="0.003"/>
+  <system-out><![CDATA[---in service-------------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
