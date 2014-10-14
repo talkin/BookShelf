@@ -11,17 +11,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-import static java.math.BigDecimal.valueOf;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:src/main/webapp/WEB-INF/applicationContext.xml")
+@ContextConfiguration("applicationContext-test.xml")
+//@ContextConfiguration(locations = {"/Dao/applicationContext-test.xml"})
 public class BookDaoTest {
     @Autowired
-    BookDao bookDao;
+    private BookDao bookDao;
+
+    public void setBookDao(BookDao bookDao) {
+        this.bookDao = bookDao;
+    }
 
     @Test
     public void should_add_one_book() throws Exception {
@@ -29,6 +33,7 @@ public class BookDaoTest {
         Book book = someBook();
         bookDao.addOneBook(book);
         List after = bookDao.findAllBooks();
+        System.out.println(after);
         assertThat(after.size(), is(before.size() + 1));
     }
 
@@ -37,7 +42,6 @@ public class BookDaoTest {
         Book book = someBook();
         bookDao.addOneBook(book);
         List books = bookDao.findBooksByTitle(book.getTitle());
-        System.out.println(books);
         assertThat(books.size(), is(not(0)));
     }
 
@@ -65,6 +69,8 @@ public class BookDaoTest {
                 .setImagePath("http://img3.douban.com/mpic/s27301840.jpg")
                 .setAuthors("tom")
                 .setIsbn("9787544269544")
-                .setPrice(valueOf(11.2));
+                .setPrice("11.2");
     }
+
+
 }

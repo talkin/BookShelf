@@ -1,6 +1,7 @@
 package com.app.Dao;
 
 import com.app.model.Book;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class BookDaoImpl implements BookDao{
+    @Autowired
     DataSource dataSource;
 
     public void setDataSource(DataSource dataSource) {
@@ -41,7 +43,8 @@ public class BookDaoImpl implements BookDao{
     @Override
     public void updateBookName() {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        String updateQuery = "UPDATE book SET title=? WHERE title=?";
+        String updateQuery = "UPDATE book SET title=? WHERE id=?";
+        jdbcTemplate.update(updateQuery);
     }
 
     @Override

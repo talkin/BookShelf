@@ -1,11 +1,11 @@
 package com.app.Dao;
 
 import com.app.model.Book;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Component
+@Repository
 public interface BookDao {
     public List findAllBooks();
 

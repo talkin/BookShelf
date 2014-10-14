@@ -15,10 +15,10 @@ dependencies {
             'org.springframework:spring-orm:4.0.6.RELEASE',
             "mysql:mysql-connector-java:5.1.32",
             'info.cukes:cucumber-java:1.1.8',
-            'org.seleniumhq.selenium:selenium-java:2.42.2'
-
+            'org.seleniumhq.selenium:selenium-java:2.42.2',
+            'org.hibernate:hibernate-core:4.3.6.Final',
+            'javax.servlet:servlet-api:3.0-alpha-1'
     )
-
 
     testCompile(
             'junit:junit:4.11',
@@ -28,4 +28,9 @@ dependencies {
             'info.cukes:cucumber-core:1.1.8',
             'info.cukes:cucumber-java:1.1.8'
     )
+
+    task createJavaProject << {
+        sourceSets*.java.srcDirs*.each { it.mkdirs() }
+        sourceSets*.resources.srcDirs*.each { it.mkdirs()}
+    }
 }

@@ -1,11 +1,13 @@
 package com.app.Controller;
 
 import com.app.Service.BookShelfService;
+import com.app.model.Book;
+import com.app.model.EBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/")
@@ -13,21 +15,19 @@ public class HomeController {
     @Autowired
     BookShelfService bookShelfService;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String gotoHome(ModelMap model){
-        model.addAttribute("items", "hello");
-        model.addAttribute("itemList", bookShelfService.findAllBooks());
-        return "home";
-    }
+    private Book getBook(HttpServletRequest request) {
+        String title = request.getParameter("title");
+        String authors = request.getParameter("authors");
+        String imagePath = request.getParameter("imagePath");
+        String isbn = request.getParameter("isbn");
+        String price = request.getParameter("price");
 
-    @RequestMapping(value = "/addBook", method = RequestMethod.POST)
-    public String addBook() {
-        return "addBook";
-    }
-
-    @RequestMapping(value = "/deleteBook", method = RequestMethod.GET)
-    public String delete() {
-        return "home";
+        return new EBook()
+                .setTitle(title)
+                .setAuthors(authors)
+                .setImagePath(imagePath)
+                .setIsbn(isbn)
+                .setPrice(price);
     }
 
 }

@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module relativePaths="true" type="JAVA_MODULE" version="4">
+<module external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" relativePaths="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
+    </facet>
+    <facet type="web" name="Web Gradle : BookShelf.war">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
@@ -10,275 +24,85 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resource" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resource" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/13.0.1/d6f22b1e60a2f1ef99e22c9f5fde270b2088365/guava-13.0.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/13.0.1/ea42e17f75a65e72d12cd311b7d1e7d6356bbb3f/guava-13.0.1-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.0.6.RELEASE/9020a09a96058133c822ff04f00e7fa0e0c3b82b/spring-webmvc-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.0.6.RELEASE/8ed4a4be827c7ae796e8f855abf6190a596bb931/spring-webmvc-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.0.6.RELEASE/d880beac77d42c5798aa2b632ddd0e4ae47c79ad/spring-core-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.0.6.RELEASE/5b16ad4018f9012ce3917e2e1038d19d2da57285/spring-core-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.6.RELEASE/3bb3a52edabf9ffe73aa534fb085c816bac28b4d/spring-context-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.6.RELEASE/778949f894ac1ee2d42a8f074a7477540f4d04a/spring-context-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/4.0.6.RELEASE/e13077d6527b7e0c1c04293c1d1696436d053a61/spring-orm-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/4.0.6.RELEASE/6041315b30ded4406574e9c0429e7119c0c7682a/spring-orm-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.32/d28c9a6cf0810fd0e2180e44029c10a54ca26de8/mysql-connector-java-5.1.32.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-java/1.1.8/69573c9bcc077d93989266dc8591c492efffff22/cucumber-java-1.1.8.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-java/1.1.8/fd7df78d000d1fdf031bf3ab1f571a393ded6d0f/cucumber-java-1.1.8-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.0.6.RELEASE/587879b58acebeb5b0a63c01e822f9b44d9a4c77/spring-beans-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.0.6.RELEASE/5e37af2dc3a230912dbb06b45cc2c1d53c2c9abb/spring-beans-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.0.6.RELEASE/5f0a135b8cf290aa244097dc6264ad0989d25c56/spring-expression-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.0.6.RELEASE/b86718cc9e7b5f53be187e8e35b44ad2dfd0196b/spring-expression-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.0.6.RELEASE/85ef4b91fcdd86d81e4a9b3e5f006dcb4128e6d/spring-web-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.0.6.RELEASE/ea420724d884a43e3db4b08d2ca5ff75715ff9bb/spring-web-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.0.6.RELEASE/e377760b7692569535573ba9f6e80b4b74869369/spring-aop-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.0.6.RELEASE/d21d57199535402a4afdb4e9406d6f5276a5b205/spring-aop-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.0.6.RELEASE/28fa5e60c3d68132d83d9c1e7d9fccebb83c9104/spring-jdbc-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.0.6.RELEASE/d8a48063da5e97fbd37f0b4fb05c6e48901999/spring-jdbc-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.0.6.RELEASE/6b4ed868e07d58f2cf15bcd7958acd86fd4f3da4/spring-tx-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.0.6.RELEASE/ae723c80e57780824d3e5bd62a07233981b0bb5f/spring-tx-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-core/1.1.8/34567b4b74dcc1487fbea0fe15fc072876aabe53/cucumber-core-1.1.8.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-core/1.1.8/2f3d7814014ec56197d8897d5ef3ddc322f8412d/cucumber-core-1.1.8-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-html/0.2.3/624a0c986088e32910336dd77aee5191c04a8201/cucumber-html-0.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-html/0.2.3/27705993aec49a6d4c9210158e3c570ebffa3d0a/cucumber-html-0.2.3-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-jvm-deps/1.0.3/cccdeff234db8b12e91ae2529812f1240b4d5603/cucumber-jvm-deps-1.0.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-jvm-deps/1.0.3/87b05affa19061ce6ff8e2fa20fa86741570b094/cucumber-jvm-deps-1.0.3-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/gherkin/2.12.2/17138631fa20fd0e44a13e50d6b7be59cee1a94/gherkin-2.12.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/gherkin/2.12.2/fc117e217134f99f3b67b7ac10ca277dab596adf/gherkin-2.12.2-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.0.6.RELEASE/b2f65445f300f1317fe694e6530cce39d7090ff6/spring-test-4.0.6.RELEASE.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.0.6.RELEASE/f0e39db787769d8926a6ae7baed1a1ebb9d6e50a/spring-test-4.0.6.RELEASE-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.8.4/5c97d8b6e715ed941aeb93d6fc401ab3eb18a566/mockito-all-1.8.4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.8.4/6cd3cee738c49b03562e0e951a4b7e1cb0db5896/mockito-all-1.8.4-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-junit/1.1.8/e3eb55d0d9386e3ad4dc0efb8518d36c82971dba/cucumber-junit-1.1.8.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/cucumber-junit/1.1.8/28ea5b13815141a9354606f7b2bacf877ff70e8c/cucumber-junit-1.1.8-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
+    <orderEntry type="library" exported="" name="Gradle: spring-webmvc-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-core-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-context-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-orm-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: mysql-connector-java-5.1.32" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: cucumber-java-1.1.8" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-java-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: hibernate-core-4.3.6.Final" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: servlet-api-3.0-alpha-1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: guava-15.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-logging-1.1.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-beans-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-expression-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: aopalliance-1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-aop-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-web-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-tx-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: spring-jdbc-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: cucumber-html-0.2.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: cucumber-jvm-deps-1.0.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: gherkin-2.12.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: cucumber-core-1.1.8" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-codec-1.9" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: httpcore-4.3.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: httpclient-4.3.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-exec-1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jna-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: platform-3.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: json-20080701" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-api-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: cglib-nodep-2.1_3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-remote-driver-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-chrome-driver-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-io-2.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: xml-apis-1.4.01" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: serializer-2.7.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: xalan-2.7.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-collections-3.2.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-lang3-3.2.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: httpmime-4.3.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: htmlunit-core-js-2.14" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: xercesImpl-2.11.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: nekohtml-1.9.20" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: sac-1.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: cssparser-0.9.13" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jetty-util-8.1.14.v20131031" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jetty-io-8.1.14.v20131031" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jetty-http-8.1.14.v20131031" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jetty-websocket-8.1.14.v20131031" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: htmlunit-2.14" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-htmlunit-driver-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-firefox-driver-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-ie-driver-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: netty-3.5.2.Final" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: webbit-0.4.14" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-safari-driver-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: selenium-support-2.42.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jboss-logging-3.1.3.GA" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jboss-logging-annotations-1.2.0.Beta1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jboss-transaction-api_1.2_spec-1.0.0.Final" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: dom4j-1.6.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: hibernate-commons-annotations-4.0.5.Final" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: hibernate-jpa-2.1-api-1.0.0.Final" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javassist-3.18.1-GA" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: antlr-2.7.7" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jandex-1.1.0.Final" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit-4.11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: spring-test-4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: mockito-all-1.8.4" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: cucumber-junit-1.1.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
   </component>
 </module>
 

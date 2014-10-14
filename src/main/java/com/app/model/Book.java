@@ -1,7 +1,6 @@
 package com.app.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 public abstract class Book implements Serializable {
 
@@ -9,7 +8,7 @@ public abstract class Book implements Serializable {
     private String imagePath;
     private String authors;
     private String isbn;
-    private BigDecimal price;
+    private String price;
 
     abstract String getLocation();
 
@@ -31,11 +30,11 @@ public abstract class Book implements Serializable {
         return this;
     }
 
-    public BigDecimal getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public Book setPrice(BigDecimal price) {
+    public Book setPrice(String price) {
         this.price = price;
         return this;
     }

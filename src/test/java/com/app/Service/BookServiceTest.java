@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
@@ -37,7 +36,7 @@ public class BookServiceTest {
         book1.setImagePath("http://img5.douban.com/Mpic/s27319217.jpg");
         book1.setAuthors("LiuTong");
         book1.setIsbn("9787508645056");
-        book1.setPrice(BigDecimal.valueOf(11.2));
+        book1.setPrice("11.2");
     }
 
     @Test
