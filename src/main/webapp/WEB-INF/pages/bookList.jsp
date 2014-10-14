@@ -14,6 +14,7 @@
     <table class="table">
         <thead>
         <tr>
+            <th>Id</th>
             <th>Title</th>
             <th>Authors</th>
             <th>ImagePath</th>
@@ -25,7 +26,7 @@
         <tbody>
         <c:forEach var="book" items="${bookList}" varStatus="status">
             <tr>
-                <td><c:out value="${status.count}"/></td>
+                <td><c:out value="${book.id}"/></td>
                 <td><c:out value="${book.title}"/></td>
                 <td><c:out value="${book.authors}"/></td>
                 <td><img src="${book.imagePath}"></td>

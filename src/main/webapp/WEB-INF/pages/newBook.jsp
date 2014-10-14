@@ -6,7 +6,7 @@
 <table>
     <table class="table">
 
-        <form:form action="newBook" method="get" modelAttribute="book">
+        <form:form action="newBook" method="post" modelAttribute="book">
 
             Title:<br>
             <input type="text" name="title" placeholder="title" value="${book.title}"/><br>

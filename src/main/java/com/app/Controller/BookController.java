@@ -31,14 +31,12 @@ public class BookController {
     @RequestMapping(value = "/newBook", method = RequestMethod.POST)
     public String addBook(EBook book) {
         bookShelfService.addOneBook(book);
-        return "redirect:/" + book.getTitle();
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/{title}", method = RequestMethod.GET)
     public String showBookProfile(@PathVariable String title, Model model) {
-        System.out.println(title);
         model.addAttribute("books", bookShelfService.findBooksByTitle(title));
         return "view";
-
     }
  }
