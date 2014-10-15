@@ -28,7 +28,7 @@ public class BookController {
         return "newBook";
     }
 
-    @RequestMapping(value = "/newBook", method = RequestMethod.POST)
+    @RequestMapping(value = "/newBook", method = RequestMethod.GET)
     public String addBook(EBook book) {
         bookShelfService.addOneBook(book);
         return "redirect:/";
