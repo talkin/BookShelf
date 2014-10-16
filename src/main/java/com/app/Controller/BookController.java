@@ -4,9 +4,7 @@ import com.app.Service.BookShelfService;
 import com.app.model.EBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,9 +32,9 @@ public class BookController {
         return "redirect:/";
     }
 
-    @RequestMapping(value = "/{title}", method = RequestMethod.GET)
-    public String showBookProfile(@PathVariable String title, Model model) {
-        model.addAttribute("books", bookShelfService.findBooksByTitle(title));
-        return "view";
-    }
+//    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+//    public String showBookProfile(@PathVariable int id, Model model) {
+//        model.addAttribute("books", bookShelfService.findBookById(id));
+//        return "view";
+//    }
  }
