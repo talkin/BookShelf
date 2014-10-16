@@ -33,7 +33,6 @@ public class BookDaoTest {
         Book book = someBook();
         bookDao.addOneBook(book);
         List after = bookDao.findAllBooks();
-        System.out.println(after);
         assertThat(after.size(), is(before.size() + 1));
     }
 
@@ -52,6 +51,14 @@ public class BookDaoTest {
         bookDao.deleteBookByTitle(book.getTitle());
         List books = bookDao.findBooksByTitle(book.getTitle());
         assertThat(books.size(), is(0));
+    }
+
+    @Test
+    public void should_find_book_by_id() throws Exception {
+        Book book = someBook();
+        bookDao.addOneBook(book);
+        List books = bookDao.findBookById(book.getId());
+        assertThat(books.size(), is(1));
     }
 
     @Test
