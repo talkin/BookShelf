@@ -7,15 +7,15 @@ import java.util.List;
 
 @Repository
 public interface BookDao {
-    public List findAllBooks();
+    public List<Book> findAllBooks();
 
     public void addOneBook(Book book);
 
     public List findBooksByTitle(String title);
 
-    public void updateBookName();
+    public void updateBookTitleById(int id, String title);
 
     public void deleteBookByTitle(String title);
 
-    public List findBookById(int id);
+    public Book findBookById(int id);
 }

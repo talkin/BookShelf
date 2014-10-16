@@ -2,7 +2,6 @@ package Dao;
 
 import com.app.Dao.BookDao;
 import com.app.model.Book;
-import com.app.model.PaperBook;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,6 @@ import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("applicationContext-test.xml")
-//@ContextConfiguration(locations = {"/Dao/applicationContext-test.xml"})
 public class BookDaoTest {
     @Autowired
     private BookDao bookDao;
@@ -29,10 +27,10 @@ public class BookDaoTest {
 
     @Test
     public void should_add_one_book() throws Exception {
-        List before = bookDao.findAllBooks();
+        List<Book> before = bookDao.findAllBooks();
         Book book = someBook();
         bookDao.addOneBook(book);
-        List after = bookDao.findAllBooks();
+        List<Book> after = bookDao.findAllBooks();
         assertThat(after.size(), is(before.size() + 1));
     }
 
@@ -55,23 +53,23 @@ public class BookDaoTest {
 
     @Test
     public void should_find_book_by_id() throws Exception {
-        Book book = someBook();
-        bookDao.addOneBook(book);
-        List books = bookDao.findBookById(book.getId());
-        assertThat(books.size(), is(1));
+        Book book = bookDao.findBookById(1);
+        assertThat(book.getTitle(), is("柏油娃娃"));
+        assertThat(book.getImagePath(), is("http://img3.douban.com/spic/s27301840.jpg"));
+        assertThat(book.getAuthors(), is("[美]托妮·莫里森"));
+        assertThat(book.getIsbn(), is("9787544269544"));
+        assertThat(book.getPrice(), is("11.2"));
     }
 
     @Test
-    public void should_update_book_name() throws Exception {
-        Book book = someBook();
-        bookDao.addOneBook(book);
-        book.setTitle("world");
-        bookDao.updateBookName();
-        assertThat(book.getTitle(), is("world"));
+    public void should_update_book_name_by_id() throws Exception {
+        bookDao.updateBookTitleById(239, "changeTitle");
+        System.out.println(bookDao.findBookById(239));
+        assertThat(bookDao.findBookById(239).getTitle(), is("changeTitle"));
     }
 
     private Book someBook() {
-        return new PaperBook()
+        return new Book()
                 .setTitle("hello")
                 .setImagePath("http://img3.douban.com/mpic/s27301840.jpg")
                 .setAuthors("tom")
