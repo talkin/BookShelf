@@ -16,4 +16,6 @@ public interface BookDao {
     public void updateBookName();
 
     public void deleteBookByTitle(String title);
+
+    public List findBookById(int id);
 }

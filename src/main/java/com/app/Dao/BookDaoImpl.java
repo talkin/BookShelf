@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public class BookDaoImpl implements BookDao{
     public List findAllBooks() {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String selectQuery = "SELECT * FROM book";
-        List<Map<String, Object>> bookList = jdbcTemplate.queryForList(selectQuery);
+        List<Book> bookList = jdbcTemplate.queryForList(selectQuery, Book.class);
         return bookList;
     }
 
@@ -54,5 +55,12 @@ public class BookDaoImpl implements BookDao{
         jdbcTemplate.update(deleteQuery, title);
     }
 
-    
+    @Override
+    public List findBookById(int id) {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String selectQuery = "SELECT * FROM book WHERE id = " + id;
+        List<Map<String, Object>> book = jdbcTemplate.queryForList(selectQuery);
+        return book;
+    }
+
 }
