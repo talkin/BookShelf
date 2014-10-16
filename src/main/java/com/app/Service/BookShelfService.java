@@ -13,12 +13,16 @@ public class BookShelfService {
     @Autowired
     private BookDao bookDao;
 
-    public List findAllBooks() {
+    public List<Book> findAllBooks() {
         return bookDao.findAllBooks();
     }
 
     public List findBooksByTitle(String title) {
         return bookDao.findBooksByTitle(title);
+    }
+
+    public Book findBookById(int id) {
+        return bookDao.findBookById(id);
     }
 
     public void addOneBook(Book book) {
@@ -29,7 +33,7 @@ public class BookShelfService {
         bookDao.deleteBookByTitle(title);
     }
 
-    public void updateBookName() {
-        bookDao.updateBookName();
+    public void updateBookName(int id, String title) {
+        bookDao.updateBookTitleById(id, title);
     }
 }

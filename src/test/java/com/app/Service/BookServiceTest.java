@@ -1,7 +1,7 @@
 package com.app.Service;
 
 import com.app.Dao.BookDao;
-import com.app.model.PaperBook;
+import com.app.model.Book;
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +18,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 
 public class BookServiceTest {
 
-    PaperBook book1;
+    Book book1;
 
     @Mock
     BookDao bookDao;
@@ -29,9 +29,9 @@ public class BookServiceTest {
     @Before
     public void setUp() throws Exception {
         initMocks(this);
-        when(bookDao.findAllBooks()).thenReturn(ImmutableList.of(new PaperBook()));
+        when(bookDao.findAllBooks()).thenReturn(ImmutableList.of(new Book()));
 
-        book1 = new PaperBook();
+        book1 = new Book();
         book1.setTitle("thinking in java");
         book1.setImagePath("http://img5.douban.com/Mpic/s27319217.jpg");
         book1.setAuthors("LiuTong");
@@ -59,8 +59,8 @@ public class BookServiceTest {
 
     @Test
     public void should_update_book() throws Exception {
-        bookShelfService.updateBookName();
-        verify(bookDao).updateBookName();
+        bookShelfService.updateBookName(book1.getId(), book1.getTitle());
+        verify(bookDao).updateBookTitleById(book1.getId(), book1.getTitle());
     }
 
     @Test
@@ -69,4 +69,10 @@ public class BookServiceTest {
         verify(bookDao).findBooksByTitle(book1.getTitle());
     }
 
+    @Test
+    public void should_get_book_by_id() throws Exception {
+        bookShelfService.findBookById(book1.getId());
+        verify(bookDao).findBookById(book1.getId());
+
+    }
 }
