@@ -2,15 +2,15 @@ package com.app.model;
 
 import java.io.Serializable;
 
-public abstract class Book implements Serializable {
+public class Book implements Serializable {
 
     private String title;
     private String imagePath;
     private String authors;
     private String isbn;
     private String price;
+    private int id;
 
-    abstract String getLocation();
 
     public String getIsbn() {
         return isbn;
@@ -55,5 +55,9 @@ public abstract class Book implements Serializable {
     public Book setImagePath(String imagePath) {
         this.imagePath = imagePath;
         return this;
+    }
+
+    public int getId() {
+        return id;
     }
 }

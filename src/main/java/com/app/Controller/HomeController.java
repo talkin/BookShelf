@@ -2,7 +2,6 @@ package com.app.Controller;
 
 import com.app.Service.BookShelfService;
 import com.app.model.Book;
-import com.app.model.EBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +21,7 @@ public class HomeController {
         String isbn = request.getParameter("isbn");
         String price = request.getParameter("price");
 
-        return new EBook()
+        return new Book()
                 .setTitle(title)
                 .setAuthors(authors)
                 .setImagePath(imagePath)

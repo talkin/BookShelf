@@ -1,7 +1,7 @@
 package com.app.Controller;
 
 import com.app.Service.BookShelfService;
-import com.app.model.EBook;
+import com.app.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -22,12 +22,12 @@ public class BookController {
 
     @RequestMapping(value = "/newPage", method = RequestMethod.GET)
     public String createBookProfile(ModelMap model) {
-        model.addAttribute(new EBook());
+        model.addAttribute(new Book());
         return "newBook";
     }
 
     @RequestMapping(value = "/newBook", method = RequestMethod.GET)
-    public String addBook(EBook book) {
+    public String addBook(Book book) {
         bookShelfService.addOneBook(book);
         return "redirect:/";
     }
