@@ -30,21 +30,15 @@ public class BookDaoImpl implements BookDao{
         while(it.hasNext()) {
             Book book = new Book();
             Map map = (Map) it.next();
+            book.setId(Integer.parseInt(map.get("id").toString()));
             book.setTitle(map.get("title").toString());
             book.setImagePath(map.get("imagePath").toString());
             book.setAuthors(map.get("author").toString());
             book.setIsbn(map.get("ISBN").toString());
             book.setPrice(map.get("price").toString());
 
-            System.out.println(book.getIsbn());
-            System.out.println(book.getTitle());
-
-            System.out.println(book);
-
             books.add(book);
         }
-
-        System.out.println(books);
 
         return books;
     }
@@ -69,8 +63,6 @@ public class BookDaoImpl implements BookDao{
     public void updateBookTitleById(int id, String title) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String updateQuery = "UPDATE book SET title=" + title + " WHERE id=" + id;
-
-        System.out.println(updateQuery);
         jdbcTemplate.update(updateQuery);
     }
 

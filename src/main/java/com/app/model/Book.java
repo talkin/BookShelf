@@ -60,4 +60,10 @@ public class Book implements Serializable {
     public int getId() {
         return id;
     }
+
+    public Book setId(int id) {
+        this.id = id;
+        return this;
+    }
+
 }

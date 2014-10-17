@@ -71,7 +71,7 @@ public class BookDaoTest {
     private Book someBook() {
         return new Book()
                 .setTitle("hello")
-                .setImagePath("http://img3.douban.com/mpic/s27301840.jpg")
+                .setImagePath("http://img3.douban.com/spic/s27301840.jpg")
                 .setAuthors("tom")
                 .setIsbn("9787544269544")
                 .setPrice("11.2");
