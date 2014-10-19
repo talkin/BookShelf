@@ -18,6 +18,9 @@
             <input type="text" name="isbn" placeholder="isbn" value="${book.isbn}"/><br>
             Price:<br>
             <input type="text" name="price" placeholder="price" value="${book.price}"/><br>
+            Type:<br>
+            <input type="text" name="type" placeholder="type" value="${book.type}"/><br>
+
 
             <button type="submit">submit</button>
         </form:form>

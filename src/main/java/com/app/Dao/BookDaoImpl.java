@@ -25,7 +25,7 @@ public class BookDaoImpl implements BookDao{
         List<Map<String, Object>> bookList = jdbcTemplate.queryForList(selectQuery);
 
         Iterator it = bookList.iterator();
-        ArrayList<Book> books = new ArrayList<Book>();
+        List<Book> books = new ArrayList<Book>();
 
         while(it.hasNext()) {
             Book book = new Book();
@@ -36,6 +36,9 @@ public class BookDaoImpl implements BookDao{
             book.setAuthors(map.get("author").toString());
             book.setIsbn(map.get("ISBN").toString());
             book.setPrice(map.get("price").toString());
+            if (map.get("type") != null) {
+                book.setType(map.get("type").toString());
+            }
 
             books.add(book);
         }
@@ -46,9 +49,9 @@ public class BookDaoImpl implements BookDao{
     @Override
     public void addOneBook(Book book) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        String addQuery = "INSERT INTO book (title, imagePath, author, ISBN, price)"
-                + " VALUES (?, ?, ?, ?, ?)";
-        jdbcTemplate.update(addQuery, book.getTitle(), book.getImagePath(), book.getAuthors(), book.getIsbn(), book.getPrice());
+        String addQuery = "INSERT INTO book (title, imagePath, author, ISBN, price, type)"
+                + " VALUES (?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(addQuery, book.getTitle(), book.getImagePath(), book.getAuthors(), book.getIsbn(), book.getPrice(), book.getType());
     }
 
     @Override

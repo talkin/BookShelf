@@ -74,7 +74,8 @@ public class BookDaoTest {
                 .setImagePath("http://img3.douban.com/spic/s27301840.jpg")
                 .setAuthors("tom")
                 .setIsbn("9787544269544")
-                .setPrice("11.2");
+                .setPrice("11.2")
+                .setType("EBook");
     }
 
 

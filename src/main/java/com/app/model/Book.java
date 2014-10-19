@@ -10,6 +10,7 @@ public class Book implements Serializable {
     private String isbn;
     private String price;
     private int id;
+    private String type;
 
 
     public String getIsbn() {
@@ -66,4 +67,12 @@ public class Book implements Serializable {
         return this;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public Book setType(String type) {
+        this.type = type;
+        return this;
+    }
 }

@@ -20,6 +20,7 @@
             <th>ImagePath</th>
             <th>ISBN</th>
             <th>Price</th>
+            <th>Type</th>
         </tr>
         </thead>
 
@@ -32,6 +33,7 @@
                 <td><img src="${book.imagePath}"></td>
                 <td><c:out value="${book.isbn}"/></td>
                 <td><c:out value="${book.price}"/></td>
+                <td><c:out value="${book.type}"/></td>
                 <td>
                     <form action="delete" method="post" modelAttribute="book">
                         <button type="submit">delete</button>
