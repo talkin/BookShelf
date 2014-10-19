@@ -7,9 +7,7 @@
 <h1>My BookList</h1>
 
 <table>
-    <form:form action="newPage" method="get">
-        <button>add book</button>
-    </form:form>
+
 
     <table class="table">
         <thead>
@@ -21,6 +19,12 @@
             <th>ISBN</th>
             <th>Price</th>
             <th>Type</th>
+
+            <th>
+                <form:form action="newPage" method="get">
+                    <button>add book</button>
+                </form:form>
+            </th>
         </tr>
         </thead>
 
@@ -35,12 +39,20 @@
                 <td><c:out value="${book.price}"/></td>
                 <td><c:out value="${book.type}"/></td>
                 <td>
-                    <form action="delete/${book.id}" method="post" modelAttribute="book">
+                    <form action="deleteBook/${book.id}" method="post" modelAttribute="book">
                         <button type="submit">delete</button>
                     </form>
+                </td>
 
-                    <form action="bookInfo" method="post" modelAttribute="book">
+                <td>
+                    <form action="editBook/id=${book.id}" method="get" modelAttribute="book">
                         <button type="submit">amend</button>
+                    </form>
+                </td>
+
+                <td>
+                    <form action="view/id=${book.id}" method="get" modelAttribute="book">
+                        <button type="submit">view</button>
                     </form>
                 </td>
 

@@ -1,13 +1,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <body>
-<h1>Add Book</h1>
+<h1>edit Book</h1>
 
 <table>
     <table class="table">
 
-        <form:form action="newBook" method="post" modelAttribute="book">
+        <form:form action="/BookShelf" method="post" modelAttribute="book">
 
+            Id:${id}<br>
             Title:<br>
             <input type="text" name="title" placeholder="title" value="${book.title}"/><br>
             Authors:<br>
@@ -18,14 +19,11 @@
             <input type="text" name="isbn" placeholder="isbn" value="${book.isbn}"/><br>
             Price:<br>
             <input type="text" name="price" placeholder="price" value="${book.price}"/><br>
-
+            Type:<br>
+            <input type="text" name="type" placeholder="type" value="${book.type}"/><br>
 
             <button type="submit">submit</button>
         </form:form>
-
-        <form method="post">
-            <button type="submit">back to home</button>
-        </form>
 
     </table>
 
