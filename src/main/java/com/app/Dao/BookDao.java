@@ -18,4 +18,6 @@ public interface BookDao {
     public void deleteBookByTitle(String title);
 
     public Book findBookById(int id);
+
+    public void deleteBookById(int id);
 }

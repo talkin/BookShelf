@@ -35,7 +35,7 @@
                 <td><c:out value="${book.price}"/></td>
                 <td><c:out value="${book.type}"/></td>
                 <td>
-                    <form action="delete" method="post" modelAttribute="book">
+                    <form action="delete/${book.id}" method="post" modelAttribute="book">
                         <button type="submit">delete</button>
                     </form>
 

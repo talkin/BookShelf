@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.not;
@@ -52,6 +53,17 @@ public class BookDaoTest {
     }
 
     @Test
+    public void should_delete_book_by_id() throws Exception {
+        Book book = someBook();
+        bookDao.addOneBook(book);
+        bookDao.deleteBookById(book.getId());
+        Book theBook = bookDao.findBookById(book.getId());
+        List<Book> books = new ArrayList<Book>();
+        books.add(theBook);
+        assertThat(books.size(), is(0));
+    }
+
+    @Test
     public void should_find_book_by_id() throws Exception {
         Book book = bookDao.findBookById(1);
         assertThat(book.getTitle(), is("柏油娃娃"));
@@ -59,6 +71,7 @@ public class BookDaoTest {
         assertThat(book.getAuthors(), is("[美]托妮·莫里森"));
         assertThat(book.getIsbn(), is("9787544269544"));
         assertThat(book.getPrice(), is("11.2"));
+        assertThat(book.getType(), is("EBook"));
     }
 
     @Test

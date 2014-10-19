@@ -53,8 +53,14 @@ public class BookServiceTest {
 
     @Test
     public void should_delete_a_book_by_title() throws Exception {
-        bookShelfService.deleteOneBookByTitle(book1.getTitle());
+        bookShelfService.deleteBookByTitle(book1.getTitle());
         verify(bookDao).deleteBookByTitle(book1.getTitle());
+    }
+
+    @Test
+    public void should_delete_a_book_by_id() throws Exception {
+        bookShelfService.deleteBookById(book1.getId());
+        verify(bookDao).deleteBookById(book1.getId());
     }
 
     @Test

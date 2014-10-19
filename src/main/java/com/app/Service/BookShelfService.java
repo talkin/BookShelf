@@ -29,11 +29,15 @@ public class BookShelfService {
         bookDao.addOneBook(book);
     }
 
-    public void deleteOneBookByTitle(String title) {
+    public void deleteBookByTitle(String title) {
         bookDao.deleteBookByTitle(title);
     }
 
     public void updateBookName(int id, String title) {
         bookDao.updateBookTitleById(id, title);
+    }
+
+    public void deleteBookById(int id) {
+        bookDao.deleteBookById(id);
     }
 }

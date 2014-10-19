@@ -92,8 +92,16 @@ public class BookDaoImpl implements BookDao{
             book.setAuthors(map.get("author").toString());
             book.setIsbn(map.get("ISBN").toString());
             book.setPrice(map.get("price").toString());
+            book.setType(map.get("type").toString());
         }
         return book;
+    }
+
+    @Override
+    public void deleteBookById(int id) {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String deleteQuery = "DELETE FROM book WHERE id = ?";
+        jdbcTemplate.update(deleteQuery, id);
     }
 
 }
