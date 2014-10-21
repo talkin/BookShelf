@@ -54,4 +54,10 @@ public class BookController {
         return "view";
     }
 
+    @RequestMapping(value = "/view/id={id}", method = RequestMethod.POST)
+    public String updateBook(@PathVariable int id, Book book) {
+        bookShelfService.updateBookById(id, book);
+        return "redirect:/";
+    }
+
  }
