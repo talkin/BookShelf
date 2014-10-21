@@ -12,10 +12,10 @@
     <table class="table">
         <thead>
         <tr>
+            <th>Image</th>
             <th>Id</th>
             <th>Title</th>
             <th>Authors</th>
-            <th>ImagePath</th>
             <th>ISBN</th>
             <th>Price</th>
             <th>Type</th>
@@ -31,10 +31,10 @@
         <tbody>
         <c:forEach var="book" items="${bookList}" varStatus="status">
             <tr>
+                <td><img src="${book.imagePath}"></td>
                 <td><c:out value="${book.id}"/></td>
                 <td><c:out value="${book.title}"/></td>
                 <td><c:out value="${book.authors}"/></td>
-                <td><img src="${book.imagePath}"></td>
                 <td><c:out value="${book.isbn}"/></td>
                 <td><c:out value="${book.price}"/></td>
                 <td><c:out value="${book.type}"/></td>
