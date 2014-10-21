@@ -104,4 +104,11 @@ public class BookDaoImpl implements BookDao{
         jdbcTemplate.update(deleteQuery, id);
     }
 
+    @Override
+    public void updateBookById(int id, Book book) {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String updateQuery = "UPDATE book SET title=?, imagePath=?, author=?, ISBN=?, price=?, type=? WHERE id=?";
+        jdbcTemplate.update(updateQuery, book.getTitle(), book.getImagePath(), book.getAuthors(), book.getIsbn(), book.getPrice(), book.getType(), id);
+    }
+
 }

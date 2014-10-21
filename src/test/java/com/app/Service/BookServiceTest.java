@@ -70,6 +70,13 @@ public class BookServiceTest {
     }
 
     @Test
+    public void should_update_book_by_id() throws Exception {
+        bookShelfService.updateBookById(book1.getId(), book1);
+        verify(bookDao).updateBookById(book1.getId(), book1);
+
+    }
+
+    @Test
     public void should_get_books_by_title() throws Exception {
         bookShelfService.findBooksByTitle(book1.getTitle());
         verify(bookDao).findBooksByTitle(book1.getTitle());

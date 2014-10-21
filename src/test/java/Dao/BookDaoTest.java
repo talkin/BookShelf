@@ -56,6 +56,7 @@ public class BookDaoTest {
     public void should_delete_book_by_id() throws Exception {
         Book book = someBook();
         bookDao.addOneBook(book);
+        System.out.println(book.getId());
         bookDao.deleteBookById(book.getId());
         Book theBook = bookDao.findBookById(book.getId());
         List<Book> books = new ArrayList<Book>();
@@ -77,9 +78,20 @@ public class BookDaoTest {
     @Test
     public void should_update_book_name_by_id() throws Exception {
         bookDao.updateBookTitleById(239, "changeTitle");
-        System.out.println(bookDao.findBookById(239));
         assertThat(bookDao.findBookById(239).getTitle(), is("changeTitle"));
     }
+
+//    @Test
+//    public void should_update_book_by_id() throws Exception {
+//        Book book = someBook();
+//        int id = book.getId();
+//        System.out.println(book.getPrice());
+//        System.out.println(book.getId());
+//        book.setPrice("30");
+//        System.out.println(book.getPrice());
+//        bookDao.updateBookById(id, book);
+//        assertThat(bookDao.findBookById(id).getPrice(), is("30"));
+//    }
 
     private Book someBook() {
         return new Book()

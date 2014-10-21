@@ -40,4 +40,8 @@ public class BookShelfService {
     public void deleteBookById(int id) {
         bookDao.deleteBookById(id);
     }
+
+    public void updateBookById(int id, Book book) {
+        bookDao.updateBookById(id, book);
+    }
 }

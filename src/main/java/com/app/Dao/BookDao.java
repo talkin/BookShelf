@@ -20,4 +20,6 @@ public interface BookDao {
     public Book findBookById(int id);
 
     public void deleteBookById(int id);
+
+    public void updateBookById(int id, Book book);
 }
