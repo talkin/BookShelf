@@ -19,8 +19,10 @@
             Price:<br>
             <input type="text" name="price" placeholder="price" value="${book.price}"/><br>
             Type:<br>
-            <input type="text" name="type" placeholder="type" value="${book.type}"/><br>
-
+            <select name="type" id="type">
+                <option value="EBook">EBook</option>
+                <option value="PaperBook">PaperBook</option>
+            </select>
 
             <button type="submit">submit</button>
         </form:form>
