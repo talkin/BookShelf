@@ -6,7 +6,7 @@
 <table>
     <table class="table">
 
-        <form:form action="/BookShelf" method="post" modelAttribute="book">
+        <form:form action="id=${id}" method="post" modelAttribute="book">
 
             Id:${id}<br>
             Title:<br>

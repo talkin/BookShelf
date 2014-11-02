@@ -47,6 +47,13 @@ public class BookController {
         return "editBook";
     }
 
+    @RequestMapping(value = "/editBook/id={id}", method = RequestMethod.POST)
+    public String submitAmend(@PathVariable int id, Book book) {
+        bookShelfService.updateBookById(id, book);
+        System.out.println(book.getId() + book.getTitle() + book.getTitle() + book.getPrice());
+        return "redirect:/";
+    }
+
     @RequestMapping(value = "/view/id={id}", method = RequestMethod.GET)
     public String viewBook(@PathVariable int id, Model model) {
         model.addAttribute("id", id);
@@ -54,10 +61,10 @@ public class BookController {
         return "view";
     }
 
-    @RequestMapping(value = "/view/id={id}", method = RequestMethod.POST)
-    public String updateBook(@PathVariable int id, Book book) {
-        bookShelfService.updateBookById(id, book);
-        return "redirect:/";
-    }
+//    @RequestMapping(value = "/view/id={id}", method = RequestMethod.POST)
+//    public String updateBook(@PathVariable int id, Book book) {
+//        bookShelfService.updateBookById(id, book);
+//        return "redirect:/";
+//    }
 
  }
