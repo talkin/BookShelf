@@ -18,7 +18,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 
 public class BookServiceTest {
 
-    Book book1;
+    Book book;
 
     @Mock
     BookDao bookDao;
@@ -28,15 +28,19 @@ public class BookServiceTest {
 
     @Before
     public void setUp() throws Exception {
+        Book oneBook = createOneBook();
         initMocks(this);
-        when(bookDao.findAllBooks()).thenReturn(ImmutableList.of(new Book()));
+        when(bookDao.findAllBooks()).thenReturn(ImmutableList.of(oneBook));
+    }
 
-        book1 = new Book();
-        book1.setTitle("thinking in java");
-        book1.setImagePath("http://img5.douban.com/Mpic/s27319217.jpg");
-        book1.setAuthors("LiuTong");
-        book1.setIsbn("9787508645056");
-        book1.setPrice("11.2");
+    private Book createOneBook() {
+        book = new Book();
+        book.setTitle("thinking in java");
+        book.setImagePath("http://img5.douban.com/Mpic/s27319217.jpg");
+        book.setAuthors("LiuTong");
+        book.setIsbn("9787508645056");
+        book.setPrice("11.2");
+        return book;
     }
 
     @Test
@@ -47,45 +51,45 @@ public class BookServiceTest {
 
     @Test
     public void should_add_a_book() throws Exception {
-        bookShelfService.addOneBook(book1);
-        verify(bookDao).addOneBook(book1);
+        bookShelfService.addOneBook(book);
+        verify(bookDao).addOneBook(book);
     }
 
     @Test
     public void should_delete_a_book_by_title() throws Exception {
-        bookShelfService.deleteBookByTitle(book1.getTitle());
-        verify(bookDao).deleteBookByTitle(book1.getTitle());
+        bookShelfService.deleteBookByTitle(book.getTitle());
+        verify(bookDao).deleteBookByTitle(book.getTitle());
     }
 
     @Test
     public void should_delete_a_book_by_id() throws Exception {
-        bookShelfService.deleteBookById(book1.getId());
-        verify(bookDao).deleteBookById(book1.getId());
+        bookShelfService.deleteBookById(book.getId());
+        verify(bookDao).deleteBookById(book.getId());
     }
 
     @Test
     public void should_update_book() throws Exception {
-        bookShelfService.updateBookName(book1.getId(), book1.getTitle());
-        verify(bookDao).updateBookTitleById(book1.getId(), book1.getTitle());
+        bookShelfService.updateBookName(book.getId(), book.getTitle());
+        verify(bookDao).updateBookTitleById(book.getId(), book.getTitle());
     }
 
     @Test
     public void should_update_book_by_id() throws Exception {
-        bookShelfService.updateBookById(book1.getId(), book1);
-        verify(bookDao).updateBookById(book1.getId(), book1);
+        bookShelfService.updateBookById(book.getId(), book);
+        verify(bookDao).updateBookById(book.getId(), book);
 
     }
 
     @Test
     public void should_get_books_by_title() throws Exception {
-        bookShelfService.findBooksByTitle(book1.getTitle());
-        verify(bookDao).findBooksByTitle(book1.getTitle());
+        bookShelfService.findBooksByTitle(book.getTitle());
+        verify(bookDao).findBooksByTitle(book.getTitle());
     }
 
     @Test
     public void should_get_book_by_id() throws Exception {
-        bookShelfService.findBookById(book1.getId());
-        verify(bookDao).findBookById(book1.getId());
+        bookShelfService.findBookById(book.getId());
+        verify(bookDao).findBookById(book.getId());
 
     }
 }

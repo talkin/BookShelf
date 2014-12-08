@@ -3,6 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
 <html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
 <body>
 <h1>My BookList</h1>
 
