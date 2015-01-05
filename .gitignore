@@ -3,6 +3,9 @@ build/
 out/
 .idea/
 *.iml
+*.ipr
+*.iws
+*.bat
 gradle/
 .DS_Store
 gradle
