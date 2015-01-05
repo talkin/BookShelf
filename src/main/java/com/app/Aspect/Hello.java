@@ -4,20 +4,17 @@ public class Hello {
 
     public static void main(String[] args) throws Exception {
         Hello hello = new Hello();
-        hello.say();
+        hello.walk();
         System.out.println("-------");
-        hello.run();
-
-        doBeforeAspect doBeforeAspect = new com.app.Aspect.doBeforeAspect();
-        doBeforeAspect.
+        hello.say();
     }
 
-    protected void say() {
+    public void walk() {
+        System.out.println("walking");
+    }
+    public void say() {
         System.out.println("saying");
     }
 
-    private void run() {
-        System.out.println("running");
-    }
 
 }

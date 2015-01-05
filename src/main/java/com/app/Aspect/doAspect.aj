@@ -1,21 +1,21 @@
 package com.app.Aspect;
 
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
-public aspect doAspect {
+@Aspect
+public class doAspect {
 
-    // 定义切点 并且指明在哪个方法
-//    pointcut deliverMessage1(): call(* Hello.say());
-    pointcut deliverMessage2(): call(* com.app.Test.Hello.run());
-
-    // 方法前拦截
-    @Before("call (* Hello.say())")
+    @Before("execution (* Hello.say())")
     public void deliverMessage1() {
-        System.out.println("6666");
+        System.out.println("before say");
     }
 
-    after(): deliverMessage2() {
-        System.out.println("after");
+    @After("execution (* Hello.walk())")
+    public void deliverMessage2() {
+
+        System.out.println("after walk");
     }
 
 }

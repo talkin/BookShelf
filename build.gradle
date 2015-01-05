@@ -19,7 +19,8 @@ dependencies {
             'org.seleniumhq.selenium:selenium-java:2.42.2',
             'org.hibernate:hibernate-core:4.3.6.Final',
             'javax.servlet:servlet-api:3.0-alpha-1',
-            'aspectj:aspectjrt:1.5.4'
+            'org.aspectj:aspectjrt:1.8.2',
+            'org.aspectj:aspectjtools:1.8.2'
     )
 
     testCompile(

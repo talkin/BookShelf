@@ -2,6 +2,7 @@
 build/
 out/
 .idea/
-.iml
+*.iml
 gradle/
 .DS_Store
+gradle
