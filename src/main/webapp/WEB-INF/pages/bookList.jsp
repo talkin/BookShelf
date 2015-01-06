@@ -28,6 +28,12 @@
                     <button>add book</button>
                 </form:form>
             </th>
+
+            <th>
+                <form:form action="user" method="get">
+                    <button>user log in</button>
+                </form:form>
+            </th>
         </tr>
         </thead>
 
