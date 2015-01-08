@@ -20,4 +20,5 @@ ${gender}<br>
 ${notes}<br>
 
 </body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </html>

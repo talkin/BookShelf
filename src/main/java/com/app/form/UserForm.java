@@ -11,6 +11,7 @@ public class UserForm {
     private String email;
     private String gender;
     private String receiveEmail;
+    private String comments;
     private String notes;
 
     public String getName() {
@@ -67,5 +68,13 @@ public class UserForm {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 }
