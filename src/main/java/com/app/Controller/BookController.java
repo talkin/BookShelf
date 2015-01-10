@@ -63,9 +63,16 @@ public class BookController {
     }
 
     @RequestMapping(value = "/view/id={id}", method = RequestMethod.GET)
-    public String viewBook(@PathVariable int id, Model model) {
+    public String viewBook(@PathVariable int id, Model model, BookForm bookForm) {
         model.addAttribute("id", id);
-        model.addAttribute("book", bookShelfService.findBookById(id));
+        Book book = bookShelfService.findBookById(id);
+        bookForm.setTitle(book.getTitle());
+        bookForm.setAuthors(book.getAuthors());
+        bookForm.setImagePath(book.getImagePath());
+        bookForm.setIsbn(book.getIsbn());
+        bookForm.setPrice(book.getPrice());
+        bookForm.setType(book.getType());
+        model.addAttribute(bookForm);
         return "view";
     }
 

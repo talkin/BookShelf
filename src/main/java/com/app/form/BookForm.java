@@ -5,6 +5,7 @@ package com.app.form;
  */
 public class BookForm {
 
+    private String id;
     private String title;
     private String imagePath;
     private String authors;
@@ -58,5 +59,13 @@ public class BookForm {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
