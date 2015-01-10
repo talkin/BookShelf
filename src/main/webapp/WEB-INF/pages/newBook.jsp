@@ -13,7 +13,7 @@
                 <label class="control-label">Title</label>
 
                 <div class="span6">
-                    <form:input path="title" cssClass="form-control" placeholder="title"/>
+                    <form:input path="title" cssClass="form-control" placeholder="title" required="required"/>
                 </div>
             </div>
 
@@ -61,9 +61,10 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" id="submitRequest" class="btn btn-primary pull-right">
-                    <span class="glyphicon glyphicon-ok"></span> Submit
-                </button>
+                <button type="submit" id="submit" class="btn btn-primary pull-right">Submit</button>
+                <form action="/BookShelf" method="get">
+                    <button type="submit" id="cancel" class="btn btn-danger pull-left">Cancel</button>
+                </form>
             </div>
 
         </form:form>
