@@ -1,34 +1,76 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
+<head>
+    <title>Add Book</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+
 <body>
-<h1>Add Book</h1>
-
-<table>
-    <table class="table">
-
+<div class="container" style="width: 350px">
         <form:form action="newBook" method="get" modelAttribute="book">
 
-            Title:<br>
-            <input type="text" name="title" placeholder="title" value="${book.title}"/><br>
-            Authors:<br>
-            <input type="text" name="authors" placeholder="authors" value="${book.authors}"/><br>
-            ImagePath:<br>
-            <input type="text" name="imagePath" placeholder="imagePath" value="${book.imagePath}"/><br>
-            ISBN:<br>
-            <input type="text" name="isbn" placeholder="isbn" value="${book.isbn}"/><br>
-            Price:<br>
-            <input type="text" name="price" placeholder="price" value="${book.price}"/><br>
-            Type:<br>
-            <select name="type" id="type">
-                <option value="EBook">EBook</option>
-                <option value="PaperBook">PaperBook</option>
-            </select>
+            <div class="form-group">
+                <label class="control-label">Title</label>
 
-            <button type="submit">submit</button>
+                <div class="span6">
+                    <form:input path="title" cssClass="form-control" placeholder="title"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Authors</label>
+
+                <div class="span6">
+                    <form:input path="authors" cssClass="form-control" placeholder="authors"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">ImagePath</label>
+
+                <div class="span6">
+                    <form:input path="imagePath" cssClass="form-control" placeholder="imagePath"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">ISBN</label>
+
+                <div class="span6">
+                    <form:input path="isbn" cssClass="form-control" placeholder="isbn"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Price</label>
+
+                <div class="span6">
+                    <form:input path="price" cssClass="form-control" placeholder="price"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Type</label>
+
+                <div class="span6">
+                    <form:select path="type" cssClass="form-control">
+                        <form:option value="EBook">EBook</form:option>
+                        <form:option value="PaperBook">PaperBook</form:option>
+                    </form:select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submitRequest" class="btn btn-primary pull-right">
+                    <span class="glyphicon glyphicon-ok"></span> Submit
+                </button>
+            </div>
+
         </form:form>
 
-    </table>
+</div>
 
-</table>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
