@@ -1,6 +1,7 @@
 package com.app.Controller;
 
 import com.app.Service.BookShelfService;
+import com.app.form.BookForm;
 import com.app.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,14 +23,21 @@ public class BookController {
         return "bookList";
     }
 
-    @RequestMapping(value = "/newPage", method = RequestMethod.GET)
+    @RequestMapping(value = "/newBook", method = RequestMethod.GET)
     public String createBookProfile(ModelMap model) {
-        model.addAttribute(new Book());
+        BookForm bookForm = new BookForm();
+        model.addAttribute(bookForm);
         return "newBook";
     }
 
-    @RequestMapping(value = "/newBook", method = RequestMethod.GET)
-    public String addBook(Book book) {
+    @RequestMapping(value = "/newBook", method = RequestMethod.POST)
+    public String addBook(Book book, BookForm bookForm) {
+        book.setTitle(bookForm.getTitle());
+        book.setAuthors(bookForm.getAuthors());
+        book.setImagePath(bookForm.getImagePath());
+        book.setIsbn(bookForm.getIsbn());
+        book.setPrice(bookForm.getPrice());
+        book.setType(bookForm.getType());
         bookShelfService.addOneBook(book);
         return "redirect:/";
     }

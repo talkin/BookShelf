@@ -24,7 +24,7 @@
             <th>Type</th>
 
             <th>
-                <form:form action="newPage" method="get">
+                <form:form action="newBook" method="get">
                     <button>add book</button>
                 </form:form>
             </th>

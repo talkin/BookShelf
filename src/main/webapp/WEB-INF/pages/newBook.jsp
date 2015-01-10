@@ -7,7 +7,7 @@
 
 <body>
 <div class="container" style="width: 350px">
-        <form:form action="newBook" method="get" modelAttribute="book">
+        <form:form method="post" modelAttribute="bookForm">
 
             <div class="form-group">
                 <label class="control-label">Title</label>
