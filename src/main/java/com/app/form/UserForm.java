@@ -7,6 +7,7 @@ public class UserForm {
 
     private String name;
     private String password;
+    private String birthday;
     private String location;
     private String email;
     private String gender;
@@ -76,5 +77,13 @@ public class UserForm {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 }

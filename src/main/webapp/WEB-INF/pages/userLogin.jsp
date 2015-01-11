@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet"
           href="http://rawgithub.com/sliptree/bootstrap-tokenfield/master/dist/css/bootstrap-tokenfield.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/css/datepicker.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        console.log("hehe");
         $('#tags').tokenfield();
 
         $('button[type="submit"]').attr('disabled', 'disabled');
@@ -36,6 +36,12 @@
         $('userForm').on('reset', function (event) {
             event.preventDefault();
             $('#userForm')[0].reset();
+        });
+
+        $('#birthday').datepicker({
+            todayBtn: true,
+            todayHighlight: true,
+            daysOfWeekDisabled: [0, 6]
         });
     });
 </script>
@@ -78,6 +84,22 @@
 
             <div class="span6">
                 <form:input path="password" cssClass="form-control" placeholder="password"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Birthday</label>
+            <span class="require">*</span>
+
+            <div class="span6">
+                    <%--<form:input path="birthday" cssClass="form-control" placeholder="birthday"/>--%>
+                    <%--<span class="glyphicon glyphicon-calendar"></span>--%>
+                <div class='input-group date' id='birthday'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
             </div>
         </div>
 
@@ -141,6 +163,7 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="http://rawgit.com/sliptree/bootstrap-tokenfield/master/dist/bootstrap-tokenfield.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/js/bootstrap-datepicker.js"></script>
 <%--<script type="text/javascript" src="<c:url value="/resources/js/userLogin.js" />"></script>--%>
 
 </body>
