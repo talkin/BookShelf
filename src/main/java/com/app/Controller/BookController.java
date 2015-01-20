@@ -49,16 +49,28 @@ public class BookController {
     }
 
     @RequestMapping(value = "/editBook/id={id}", method = RequestMethod.GET)
-    public String amendBook(@PathVariable int id, Model model) {
+    public String amendBook(@PathVariable int id, Model model, BookForm bookForm) {
         model.addAttribute("id", id);
-        model.addAttribute("book", bookShelfService.findBookById(id));
+        Book book = bookShelfService.findBookById(id);
+        bookForm.setTitle(book.getTitle());
+        bookForm.setAuthors(book.getAuthors());
+        bookForm.setImagePath(book.getImagePath());
+        bookForm.setIsbn(book.getIsbn());
+        bookForm.setPrice(book.getPrice());
+        bookForm.setType(book.getType());
+        model.addAttribute(bookForm);
         return "editBook";
     }
 
     @RequestMapping(value = "/editBook/id={id}", method = RequestMethod.POST)
-    public String submitAmend(@PathVariable int id, Book book) {
+    public String submitAmend(@PathVariable int id, Book book, BookForm bookForm) {
+        book.setTitle(bookForm.getTitle());
+        book.setAuthors(bookForm.getAuthors());
+        book.setImagePath(bookForm.getImagePath());
+        book.setIsbn(bookForm.getIsbn());
+        book.setPrice(bookForm.getPrice());
+        book.setType(bookForm.getType());
         bookShelfService.updateBookById(id, book);
-        System.out.println(book.getId() + book.getTitle() + book.getTitle() + book.getPrice());
         return "redirect:/";
     }
 
