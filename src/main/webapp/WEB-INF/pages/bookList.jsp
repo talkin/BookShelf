@@ -25,6 +25,14 @@
             </form:form>
         </th>
 
+
+        <th>
+            <button type="button" class="btn btn-lg btn-primary" data-animation="am-fade-and-scale"
+                    data-placement="center" bs-modal="modal">Click to toggle modal<br>
+                <small>(using an object)</small>
+            </button>
+        </th>
+
         <table class="table table-striped">
             <thead>
             <tr class="success">
