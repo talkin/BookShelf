@@ -23,7 +23,7 @@
                 <label class="control-label">Authors</label>
 
                 <div class="span6">
-                    <form:input path="authors" cssClass="form-control" placeholder="authors"/>
+                    <form:input path="authors" cssClass="form-control" placeholder="authors" required="required"/>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
                 <label class="control-label">ImagePath</label>
 
                 <div class="span6">
-                    <form:input path="imagePath" cssClass="form-control" placeholder="imagePath"/>
+                    <form:input path="imagePath" cssClass="form-control" placeholder="imagePath" required="required"/>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                 <label class="control-label">ISBN</label>
 
                 <div class="span6">
-                    <form:input path="isbn" cssClass="form-control" placeholder="isbn"/>
+                    <form:input path="isbn" cssClass="form-control" placeholder="isbn" required="required"/>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                 <label class="control-label">Price</label>
 
                 <div class="span6">
-                    <form:input path="price" cssClass="form-control" placeholder="price"/>
+                    <form:input path="price" cssClass="form-control" placeholder="price" required="required"/>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@
                 <label class="control-label">Type</label>
 
                 <div class="span6">
-                    <form:select path="type" cssClass="form-control">
+                    <form:select path="type" cssClass="form-control" required="required">
                         <form:option value="EBook">EBook</form:option>
                         <form:option value="PaperBook">PaperBook</form:option>
                     </form:select>

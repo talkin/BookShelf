@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=GB2312" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <html>
 <head>
@@ -58,17 +58,17 @@
                     <td><c:out value="${book.type}"/></td>
                     <td>
                         <form action="view/id=${book.id}" method="get" modelAttribute="book">
-                            <button type="submit" class="btn btn-info">view</button>
+                            <button id="view" type="submit" class="btn btn-info">view</button>
                         </form>
                     </td>
                     <td>
                         <form action="editBook/id=${book.id}" method="get" modelAttribute="book">
-                            <button type="submit" class="btn btn-primary">amend</button>
+                            <button id="amend" type="submit" class="btn btn-primary">amend</button>
                         </form>
                     </td>
                     <td>
                         <form action="deleteBook/${book.id}" method="post" modelAttribute="book">
-                            <button type="submit" class="btn btn-danger">delete</button>
+                            <button id="delete" type="submit" onclick="confirmDelete()" class="btn btn-danger">delete</button>
                         </form>
                     </td>
 
@@ -80,7 +80,8 @@
     </table>
 </div>
 
-<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<c:url value="/resources/jquery/jquery-1.11.2.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/bootstrap/bootstrap.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/bookList.js"/>"></script>
 </body>
 </html>
