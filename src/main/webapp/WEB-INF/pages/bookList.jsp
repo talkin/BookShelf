@@ -15,13 +15,13 @@
 
         <th>
             <form:form action="newBook" method="get">
-                <button class="btn btn-info">add book</button>
+                <button id="addBook" class="btn btn-info">add book</button>
             </form:form>
         </th>
 
         <th>
             <form:form action="user" method="get">
-                <button class="btn btn-info">user log in</button>
+                <button id="userLogIn" class="btn btn-info">user log in</button>
             </form:form>
         </th>
 
