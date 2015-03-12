@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .right-buffer {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    Hi ${requester},
+</p>
+<p>Thank you for your request.</p>
+
+</body>
+</html>
