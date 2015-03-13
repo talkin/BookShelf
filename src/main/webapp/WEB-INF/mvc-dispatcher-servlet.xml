@@ -16,6 +16,11 @@
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="resourceLoaderPath" value="/WEB-INF/templates"></property>
+    </bean>
+
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
 </beans>

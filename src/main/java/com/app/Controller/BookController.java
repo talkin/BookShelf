@@ -1,5 +1,6 @@
 package com.app.Controller;
 
+import com.app.EmailHelper;
 import com.app.Service.BookShelfService;
 import com.app.form.BookForm;
 import com.app.model.Book;
@@ -17,6 +18,9 @@ public class BookController {
     @Autowired
     BookShelfService bookShelfService;
 
+    @Autowired
+    EmailHelper emailHelper;
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String showBookList(ModelMap model){
         model.addAttribute("bookList", bookShelfService.findAllBooks());
@@ -27,6 +31,7 @@ public class BookController {
     public String createBookProfile(ModelMap model) {
         BookForm bookForm = new BookForm();
         model.addAttribute(bookForm);
+        System.out.println("123" + emailHelper.getEmailText());
         return "newBook";
     }
 
