@@ -9,7 +9,7 @@
 
 <div class="container" style="width: 350px">
 
-        <form:form action="/BookShelf" method="get" modelAttribute="bookForm">
+        <form:form action="/BookShelf" method="get" modelAttribute="book">
 
             <div class="form-group">
                 <label class="control-label">Id</label>
