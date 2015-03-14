@@ -15,6 +15,8 @@ dependencies {
             'org.springframework:spring-orm:4.0.6.RELEASE',
             'org.springframework:spring-aop:4.0.6.RELEASE',
             'org.springframework:spring-context-support:4.0.6.RELEASE',
+            'org.springframework.security:spring-security-web:3.2.6.RELEASE',
+            'org.springframework.security:spring-security-config:3.2.6.RELEASE',
             'org.apache.velocity:velocity:1.7',
             "mysql:mysql-connector-java:5.1.32",
             'info.cukes:cucumber-java:1.1.8',
