@@ -22,7 +22,7 @@
         </ul>
     </div>
 
-    <form:form method="post" action="id=${id}" modelAttribute="bookForm">
+    <form:form method="post" action="id=${id}" modelAttribute="book">
 
         <div class="form-group">
             <label class="control-label">Title</label>
