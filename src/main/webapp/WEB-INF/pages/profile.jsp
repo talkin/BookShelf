@@ -14,12 +14,12 @@
 </head>
 <body>
 
-${name}<br>
-${password}<br>
-${email}<br>
-${location}<br>
-${gender}<br>
-${notes}<br>
+${user.name}<br>
+${user.password}<br>
+${user.email}<br>
+${user.location}<br>
+${user.gender}<br>
+${user.notes}<br>
 
 </body>
 <script type="text/javascript" src="<c:url value="/resources/jquery/jquery-1.11.2.js" />"></script>

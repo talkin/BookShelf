@@ -14,7 +14,7 @@
 <body>
 <div class="container" style="width: 350px">
 
-    <form:form modelAttribute="userForm" method="post" class="form-horizontal">
+    <form:form modelAttribute="user" method="post" class="form-horizontal">
 
         <div class="form-group">
             <label class="control-label" for="tags">Tags</label>
