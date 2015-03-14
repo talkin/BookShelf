@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,21 +29,14 @@ public class BookController {
     }
 
     @RequestMapping(value = "/newBook", method = RequestMethod.GET)
-    public String createBookProfile(ModelMap model) {
-        BookForm bookForm = new BookForm();
-        model.addAttribute(bookForm);
-        System.out.println("123" + emailHelper.getEmailText());
+    public String createBookProfile(Model model) {
+        model.addAttribute(new Book());
         return "newBook";
     }
 
     @RequestMapping(value = "/newBook", method = RequestMethod.POST)
-    public String addBook(Book book, BookForm bookForm) {
-        book.setTitle(bookForm.getTitle());
-        book.setAuthors(bookForm.getAuthors());
-        book.setImagePath(bookForm.getImagePath());
-        book.setIsbn(bookForm.getIsbn());
-        book.setPrice(bookForm.getPrice());
-        book.setType(bookForm.getType());
+    public String addBook(@ModelAttribute Book book, Model model) {
+        model.addAttribute("book", book);
         bookShelfService.addOneBook(book);
         return "redirect:/";
     }

@@ -9,7 +9,7 @@
 
 <body>
 <div class="container" style="width: 350px">
-        <form:form method="post" modelAttribute="bookForm">
+        <form:form method="post" modelAttribute="book">
 
             <div class="form-group">
                 <label class="control-label">Title</label>
