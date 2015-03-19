@@ -22,9 +22,14 @@ dependencies {
             'info.cukes:cucumber-java:1.1.8',
             'org.seleniumhq.selenium:selenium-java:2.42.2',
             'org.hibernate:hibernate-core:4.3.6.Final',
+            'org.hibernate:hibernate-entitymanager:4.3.6.Final',
             'javax.servlet:servlet-api:3.0-alpha-1',
             'org.aspectj:aspectjrt:1.8.2',
-            'org.aspectj:aspectjtools:1.8.2'
+            'org.aspectj:aspectjtools:1.8.2',
+            'org.slf4j:slf4j-api:1.7.10',
+            'org.slf4j:slf4j-log4j12:1.7.10',
+            'org.apache.logging.log4j:log4j-core:2.2'
+
     )
 
     testCompile(
