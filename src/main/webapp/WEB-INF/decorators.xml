@@ -1,0 +1,13 @@
+<decorator default="">
+    <excludes>
+        <pattern>/login</pattern>
+    </excludes>
+
+    <decorator name="master-decorator" page="master.jsp">
+        <pattern>/</pattern>
+    </decorator>
+
+    <decorator name="wfpMaster-decorator" page="wfpMaster">
+        <pattern>/WFP</pattern>
+    </decorator>
+</decorator>
