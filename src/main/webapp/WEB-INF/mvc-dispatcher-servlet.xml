@@ -22,5 +22,6 @@
     </bean>
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <mvc:view-controller path="/error" view-name="/error" />
 
 </beans>
