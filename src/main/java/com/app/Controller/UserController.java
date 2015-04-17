@@ -1,6 +1,6 @@
 package com.app.Controller;
 
-import com.app.model.User;
+import com.app.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;

@@ -1,4 +1,4 @@
-package com.app.model;
+package com.app.domain;
 
 /**
  * Created by jtao on 3/14/15.
